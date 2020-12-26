@@ -9,6 +9,7 @@ import pandas as pd
 import json
 import os
 import bs4 as BeautifulSoup
+import geckodriver_autoinstaller
 BeautifulSoup == Soup
 ## My newest video as of 12/25/2020
 url = "https://www.youtube.com/watch?v=r4NSmFTlilY"
