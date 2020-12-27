@@ -9,6 +9,8 @@ import geckodriver_autoinstaller
 BeautifulSoup == Soup
 import ctypes
 while True:
+    ## Makes an effective parser for Youtube to scan the channel and see if there are more than 5 videos on the page, if not, it rescans the whole page after 60 seconds.
+    ## After it finds that there are now 6 videos it executes the else code block.
     url1 = "https://www.youtube.com/channel/UCH-aWO3Vm_MfS7zxXBMJbNw"
     header = {Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0}
     response = requests.get(url1, headers=headers)
@@ -34,4 +36,5 @@ while True:
         driver.find_element_by_xpath(
             '/html/body/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/main/form/div/div/div/div/div[3]/div[2]/div').send_keys(
             "Check out my videos! " + url)
+        ## Makes a pop up message after completing the program to let you know that it was executed correctly.
         ctypes.windll.user32.MessageBoxW(0, "Messages sent to discord. ", "Your program actually worked and did what it was supposed to. ")
