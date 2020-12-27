@@ -13,7 +13,7 @@ is_updated = driver.find_element_by_xpath('/html/body/div[4]/main/div[2]/div/div
 nonUpdated = driver.find_element_by_xpath('/html/body/div[4]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div/div/div[1]/svg/g/g[53]/rect[5]')
 updated2 = driver.find_element_by_xpath('/html/body/div[4]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div/div/div[1]/svg/g/g[47]/rect[4]')
 is_updated = driver.find_element_by_xpath('/html/body/div[4]/main/div[2]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div/div/div[1]/svg/g/g[47]/rect[4]').append(updated2)
-if updated1 or updated2:
+while updated1 or updated2:
     time.sleep(60)
 else:
     ctypes.windll.user32.MessageBoxW(0, "YOU HAVE NOT YET UPDATED YOUR GITHUB PAGE TODAY!!!", "ERROR")
