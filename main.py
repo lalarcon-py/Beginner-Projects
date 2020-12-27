@@ -17,9 +17,5 @@ if updated1 or updated2:
     time.sleep(60)
 else:
     ctypes.windll.user32.MessageBoxW(0, "YOU HAVE NOT YET UPDATED YOUR GITHUB PAGE TODAY!!!", "ERROR")
-
-
-
-
-
-
+##WIP WIP WIP##
+##There is still a LOT of unnecessary code here, I will continue to edit this program and change it as time goes on##
