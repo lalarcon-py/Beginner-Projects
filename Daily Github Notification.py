@@ -1,6 +1,5 @@
 from selenium import webdriver
 import bs4 as BeautifulSoup
-import requests
 import xmlify
 import geckodriver_autoinstaller
 import time
@@ -17,5 +16,4 @@ while updated1 or updated2:
     time.sleep(60)
 else:
     ctypes.windll.user32.MessageBoxW(0, "YOU HAVE NOT YET UPDATED YOUR GITHUB PAGE TODAY!!!", "ERROR")
-##WIP WIP WIP##
-##There is still a LOT of unnecessary code here, I will continue to edit this program and change it as time goes on##
+##This program is to provide myself a message to make my daily commits on Github!
