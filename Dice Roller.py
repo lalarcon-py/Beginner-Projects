@@ -20,5 +20,7 @@ while roll_again == True:
     roll_again1 = input("\nRoll the dice again? (Y/N)")
     if roll_again1 == "Y":
         continue
-    elif roll_again1 == "N":
+    elif roll_again1 != "Y":
         roll_again = False
+    else:
+        print("The answer wasn't Y/N. Try again.")
