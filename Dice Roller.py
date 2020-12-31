@@ -1,13 +1,13 @@
 import random
 import time
 
-
-roll_again = "Yes"
+roll_again = True
 
 dice1 = random.randint(1, 6)
 dice2 = random.randint(1, 6)
-while roll_again == "Yes" or "y":
-    print("\nRolling the dice...")
+while roll_again == True:
+    roll_again = True
+    print("Rolling the dice...")
     time.sleep(1)
     dice1 = random.randint(1, 6)
     dice2 = random.randint(1, 6)
@@ -17,7 +17,8 @@ while roll_again == "Yes" or "y":
         print("You rolled doubles!")
     else:
         print("Keep goin'!")
-    roll_again = input("\nRoll the dice again? (Y/N)")
-
-
-
+    roll_again1 = input("\nRoll the dice again? (Y/N)")
+    if roll_again1 == "Y":
+        continue
+    elif roll_again1 == "N":
+        roll_again = False
