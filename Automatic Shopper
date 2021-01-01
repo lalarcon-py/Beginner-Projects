@@ -493,3 +493,4 @@ except NoSuchElementException:
 else:
     cart2.click()
     checkout.click()
+############### STILL A WORK IN PROGRESS ######################
