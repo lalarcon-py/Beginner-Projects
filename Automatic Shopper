@@ -1,0 +1,495 @@
+import selenium
+from selenium import webdriver
+import time
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import ElementClickInterceptedException
+import selenium.webdriver.support.ui
+
+driver = webdriver.Firefox()
+driver.maximize_window()
+driver.get('https://www.nike.com/launch/t/air-force-1-lv8-pacific-blue')
+selenium.webdriver.support.ui.WebDriverWait(driver, 10)
+
+
+## These variables are the different shoe sizes being directed by their XPaths
+
+
+size_6 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[1]/button')
+size_6_5 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[2]/button')
+size_7 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[3]/button')
+size_7_5 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[4]/button')
+size_8 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[5]/button')
+size_8_5 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[6]/button')
+size_9 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[7]/button')
+size_9_5 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[8]/button')
+size_10 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[9]/button')
+size_10_5 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[10]/button')
+size_11 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[11]/button')
+size_11_5 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[12]/button')
+size_12 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[13]/button')
+size_12_5 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[14]/button')
+size_13 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[15]/button')
+size_13_5 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[16]/button')
+size_14 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/section/div[2]/div/div[2]/div/ul/li[17]/button')
+checkout = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/div/div/div/div/div[3]/button[2]')
+cart2 = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div[2]/div[2]/div/section[1]/div[2]/aside/div/div[2]/div/div[2]/div/button')
+# Prioritizes the size 10 selection as that is the most common shoe size
+size_10.click()
+try:
+    size_6.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_6_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_7.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_7_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_8.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_8_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_9.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_9_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_10.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_10_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_11.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_11_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_12.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_13.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_14.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+time.sleep(220)
+
+# After 220 seconds the program automatically goes to the next page in order for you to continue buying shoes that may or may not still be in stock.
+
+driver.get("https://www.nike.com/launch/t/jordan-why-not-zer04-upbringing")
+
+try:
+    size_6.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_6_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_7.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_7_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_8.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_8_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_9.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_9_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_10.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_10_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_11.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_11_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_12.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_13.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_14.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+time.sleep(220)
+driver.get("https://www.nike.com/launch/t/air-force-1-07-craft-mantra-orange")
+
+try:
+    size_6.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_6_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_7.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_7_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_8.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_8_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_9.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_9_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_10.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_10_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_11.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_11_5.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_12.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_13.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
+
+try:
+    size_14.click()
+except ElementClickInterceptedException:
+    pass
+except NoSuchElementException:
+    pass
+else:
+    cart2.click()
+    checkout.click()
